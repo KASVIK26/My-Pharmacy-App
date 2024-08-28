@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ownerupdate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#312F2F">
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="624dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="59dp"
+        android:fontFamily="@font/tinos_reg"
+        android:text="Update"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/p_udps"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="323dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="348dp"
+        android:fontFamily="@font/tinos_reg"
+        android:text="UPDATE DISCOUNT PRICE (SMALL QTY)"
+        android:textColor="@color/btncolor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/p_udpb"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="457dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="214dp"
+        android:fontFamily="@font/tinos_reg"
+        android:text="UPDATE DISCOUNT PRICE (BULK QTY)"
+        android:textColor="@color/btncolor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/e_udps"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="392dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="291dp"
+        android:background="@drawable/round_button"
+        android:ems="10"
+        android:fontFamily="@font/tinos_reg"
+        android:hint="Enter Price"
+        android:textColorHint="#4C4949"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/e_udpb"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="529dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="154dp"
+        android:background="@drawable/round_button"
+        android:ems="10"
+        android:fontFamily="@font/tinos_reg"
+        android:hint="Enter Price"
+        android:textColorHint="#4C4949"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/e_expiry"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="423dp"
+        android:background="@drawable/round_button"
+        android:ems="10"
+        android:fontFamily="@font/tinos_reg"
+        android:hint="Enter Exp. Date"
+        android:textColorHint="#4C4949"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/p_expiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="218dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="486dp"
+        android:fontFamily="@font/tinos_reg"
+        android:text="UPDATE EXPIRY DATE"
+        android:textColor="@color/btncolor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <EditText
+        android:id="@+id/e_capturebarcode"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="527dp"
+        android:background="@drawable/round_button"
+        android:ems="10"
+        android:fontFamily="@font/tinos_reg"
+        android:hint="Scan Barcode"
+        android:textColorHint="#4C4949"
+android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/p_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="194dp"
+        android:layout_marginBottom="589dp"
+        android:fontFamily="@font/tinos_reg"
+        android:text="CAPTURE BARCODE"
+        android:textColor="@color/btncolor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txt_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="656dp"
+        android:fontFamily="@font/tinos_reg"
+        android:text="UPDATE PRODUCT"
+        android:textColor="@color/btncolor"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
