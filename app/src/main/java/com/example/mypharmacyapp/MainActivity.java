@@ -14,7 +14,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     TextView txtwishing;
-    Button btnowner,btnuser,btnlogin,btnregister;
+    Button btnowner,btnuser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
