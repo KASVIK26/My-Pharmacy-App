@@ -14,7 +14,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     TextView txtwishing;
-    Button btnowner,btnuser;
+    Button btnowner,btnuser,btnlogin,btnregister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,14 +45,14 @@ public class MainActivity extends AppCompatActivity {
         btnowner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,owner_scrn.class);
+                Intent i = new Intent(MainActivity.this,owner_login.class);
                 startActivity(i);
             }
         });
         btnuser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,user_scrn.class);
+                Intent i = new Intent(MainActivity.this,user_login.class);
                 startActivity(i);
             }
         });

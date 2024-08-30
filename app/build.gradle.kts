@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.firebase.database.ktx)
     implementation(libs.androidx.recyclerview)
     implementation(libs.play.services.mlkit.barcode.scanning)
+    implementation(libs.firebase.inappmessaging)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

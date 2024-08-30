@@ -131,5 +131,11 @@ public class dbConnect extends SQLiteOpenHelper {
         int result = db.delete(TABLE_NAME, COLUMN_BARCODE + " = ?", new String[]{barcode});
         return result > 0; // Returns true if the product was deleted successfully
     }
+    public boolean deleteAllProducts() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int result = db.delete(TABLE_NAME, null, null);
+        return result > 0;
+    }
+
 
 }
