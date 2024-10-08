@@ -5,104 +5,119 @@
     android:id="@+id/ownerscrn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#312F2F"
+    android:background="@drawable/gradient"
     tools:context=".owner_scrn">
 
     <!-- Header Text -->
-
     <!-- View Button -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="320dp"
+        android:layout_height="450dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="31dp"
+        android:background="@drawable/gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hellotext">
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/ic_backg"
+
+            android:fontFamily="@font/tinos_reg"
+            android:text="Delete"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/update" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/ic_backg"
+
+            android:fontFamily="@font/tinos_reg"
+            android:text="Update"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/ic_backg"
+
+            android:fontFamily="@font/tinos_reg"
+            android:text="Add"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <Button
+            android:id="@+id/view"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/ic_backg"
+            android:fontFamily="@font/tinos_reg"
+            android:text="View"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnuserregister" />
+
+        <Button
+            android:id="@+id/btnuserregister"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="29dp"
+            android:background="@drawable/ic_backg"
+            android:fontFamily="@font/tinos_reg"
+            android:text="REGISTER USER"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/hellotext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/tinos_reg"
         android:text="Hello!"
+
         android:textColor="@color/btncolor"
         android:textSize="72sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnlogout"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:clickable="true"
+        android:contentDescription=" "
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logout" />
 
     <!-- Add Button -->
     <!-- Update Button -->
     <!-- Delete Button -->
-
-    <Button
-        android:id="@+id/view"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="80dp"
-        android:textSize="18sp"
-        android:background="@drawable/purple_round_btn"
-        android:fontFamily="@font/tinos_reg"
-        android:text="View"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnuserregister" />
-
-    <Button
-        android:id="@+id/add"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:textSize="18sp"
-        android:background="@drawable/purple_round_btn"
-        android:fontFamily="@font/tinos_reg"
-
-        android:text="Add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
-
-    <Button
-        android:id="@+id/update"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:textSize="18sp"
-        android:background="@drawable/purple_round_btn"
-        android:fontFamily="@font/tinos_reg"
-
-        android:text="Update"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add" />
-
-    <Button
-        android:id="@+id/delete"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:textSize="18sp"
-        android:background="@drawable/purple_round_btn"
-        android:fontFamily="@font/tinos_reg"
-
-        android:text="Delete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/update" />
-
-    <Button
-        android:id="@+id/btnuserregister"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="80dp"
-        android:background="@drawable/purple_round_btn"
-        android:fontFamily="@font/tinos_reg"
-        android:text="REGISTER USER"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hellotext" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

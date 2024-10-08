@@ -6,197 +6,240 @@
     android:id="@+id/add_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#312F2F"
+    android:background="@drawable/gradient"
     tools:context=".owner_add">
 
     <!-- Headline TextView -->
+
+    <!-- Product Name Label -->
+
     <TextView
         android:id="@+id/headline"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/tinos_reg"
         android:gravity="center"
         android:text="ADD PRODUCTS TO CATALOGUE"
         android:textColor="@color/btncolor"
         android:textSize="36sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Product Name Label -->
-    <TextView
-        android:id="@+id/p_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/tinos_reg"
-        android:text="PRODUCT NAME"
-        android:textColor="@color/btncolor"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/headline"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="610dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="7dp"
+        android:background="@drawable/cardview_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headline">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/purple_round_btn"
+            android:fontFamily="@font/tinos_reg"
+            android:text="Add"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/e_dpb" />
+
+        <EditText
+            android:id="@+id/e_dpb"
+            android:layout_width="320dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="38dp"
+            android:background="@drawable/round_button"
+            android:ems="10"
+            android:fontFamily="@font/tinos_reg"
+            android:hint="Enter Price"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#4C4949"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/e_dps" />
+
+        <TextView
+            android:id="@+id/p_dpb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/tinos_reg"
+            android:text="DISCOUNT PRICE (BULK QTY)"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/e_dpb"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/e_dps"
+            android:layout_width="320dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="38dp"
+            android:background="@drawable/round_button"
+            android:ems="10"
+            android:fontFamily="@font/tinos_reg"
+            android:hint="Enter Price"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#4C4949"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/e_expiry" />
+
+        <TextView
+            android:id="@+id/p_dps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="9dp"
+            android:fontFamily="@font/tinos_reg"
+            android:text="DISCOUNT PRICE (SMALL QTY)"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/e_dps"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/e_expiry"
+            android:layout_width="320dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/round_button"
+            android:ems="10"
+            android:fontFamily="@font/tinos_reg"
+            android:hint="Enter Exp. Date"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#4C4949"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/e_scanbarcode" />
+
+        <TextView
+            android:id="@+id/p_expiry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/tinos_reg"
+            android:text="EXPIRY"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/e_expiry"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/e_scanbarcode"
+            android:layout_width="320dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/round_button"
+            android:ems="10"
+            android:fontFamily="@font/tinos_reg"
+            android:hint="Scan Barcode"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#4C4949"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/e_name" />
+
+        <TextView
+            android:id="@+id/p_capturebarcode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="9dp"
+            android:fontFamily="@font/tinos_reg"
+            android:text="CAPTURE BARCODE"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/e_scanbarcode"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/e_name"
+            android:layout_width="320dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/round_button"
+            android:ems="10"
+            android:fontFamily="@font/tinos_reg"
+            android:hint="Enter Product Name"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#4C4949"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/tinos_reg"
+            android:text="PRODUCT NAME"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/e_name"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Product Name EditText -->
-    <EditText
-        android:id="@+id/e_name"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:background="@drawable/round_button"
-        android:ems="10"
-        android:fontFamily="@font/tinos_reg"
-        android:hint="Enter Product Name"
-        android:textColor="@color/black"
-        android:textColorHint="#4C4949"
-        app:layout_constraintTop_toBottomOf="@id/p_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="20dp"/>
 
     <!-- Capture Barcode Label -->
-    <TextView
-        android:id="@+id/p_capturebarcode"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/tinos_reg"
-        android:text="CAPTURE BARCODE"
-        android:textColor="@color/btncolor"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/e_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="20dp"/>
 
     <!-- Capture Barcode EditText -->
-    <EditText
-        android:id="@+id/e_scanbarcode"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:background="@drawable/round_button"
-        android:ems="10"
-        android:textColor="@color/black"
-android:textColorHint="#4C4949"
-        android:fontFamily="@font/tinos_reg"
-        android:hint="Scan Barcode"
-        app:layout_constraintTop_toBottomOf="@id/p_capturebarcode"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="20dp"/>
 
     <!-- Expiry Label -->
-    <TextView
-        android:id="@+id/p_expiry"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/tinos_reg"
-        android:text="EXPIRY"
-        android:textColor="@color/btncolor"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/e_scanbarcode"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="20dp"/>
 
     <!-- Expiry EditText -->
-    <EditText
-        android:id="@+id/e_expiry"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:background="@drawable/round_button"
-        android:ems="10"
-        android:fontFamily="@font/tinos_reg"
-        android:hint="Enter Exp. Date"
-        android:textColor="@color/black"
-        android:textColorHint="#4C4949"
-        app:layout_constraintTop_toBottomOf="@id/p_expiry"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="20dp"/>
 
     <!-- Discount Price (Small Quantity) Label -->
-    <TextView
-        android:id="@+id/p_dps"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/tinos_reg"
-        android:text="DISCOUNT PRICE (SMALL QTY)"
-        android:textColor="@color/btncolor"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/e_expiry"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="20dp"/>
 
     <!-- Discount Price (Small Quantity) EditText -->
-    <EditText
-        android:id="@+id/e_dps"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:background="@drawable/round_button"
-        android:ems="10"
-        android:fontFamily="@font/tinos_reg"
-        android:hint="Enter Price"
-        android:textColor="@color/black"
-        android:textColorHint="#4C4949"
-        app:layout_constraintTop_toBottomOf="@id/p_dps"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="20dp"/>
 
     <!-- Discount Price (Bulk Quantity) Label -->
-    <TextView
-        android:id="@+id/p_dpb"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/tinos_reg"
-        android:text="DISCOUNT PRICE (BULK QTY)"
-        android:textColor="@color/btncolor"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/e_dps"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="20dp"/>
 
     <!-- Discount Price (Bulk Quantity) EditText -->
-    <EditText
-        android:id="@+id/e_dpb"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:background="@drawable/round_button"
-        android:ems="10"
-        android:fontFamily="@font/tinos_reg"
-        android:hint="Enter Price"
-        android:textColor="@color/black"
-        android:textColorHint="#4C4949"
-        app:layout_constraintTop_toBottomOf="@id/p_dpb"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="20dp"/>
 
     <!-- Add Button -->
-    <Button
-        android:id="@+id/add"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/tinos_reg"
-        android:background="@drawable/purple_round_btn"
-        android:text="Add"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/e_dpb" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

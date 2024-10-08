@@ -1,11 +1,14 @@
 package com.example.mypharmacyapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.mlkit.vision.barcode.common.Barcode;
@@ -20,7 +23,7 @@ public class user_scrn extends AppCompatActivity {
     Button btnsearch;
     private GmsBarcodeScanner scanner;
     private dbConnect database;
-
+    ImageView btnuserlogout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +33,7 @@ public class user_scrn extends AppCompatActivity {
         txthello = findViewById(R.id.txthello);
         e_scanbarcode = findViewById(R.id.e_scanbarcode);
         btnsearch = findViewById(R.id.btnsearch);
-
+        btnuserlogout = findViewById(R.id.btnuserlogout);
         // Initialize the database and barcode scanner
         database = new dbConnect(this);
         initializeGoogleScanner();
@@ -40,6 +43,8 @@ public class user_scrn extends AppCompatActivity {
 
         // Optional: Clear the EditText when button is clicked
         btnsearch.setOnClickListener(v -> e_scanbarcode.setText(""));
+        // Set up logout button with confirmation dialog
+        btnuserlogout.setOnClickListener(v -> showLogoutConfirmationDialog());
     }
 
     private void initializeGoogleScanner() {
@@ -75,5 +80,19 @@ public class user_scrn extends AppCompatActivity {
         } else {
             txtcapturebarcode.setText("Product not found");
         }
+    }
+    private void showLogoutConfirmationDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("Logout")
+                .setMessage("Are you sure you want to logout?")
+                .setPositiveButton("Yes", (dialog, which) -> {
+                    // Perform logout
+                    SharedPreferencesUtil.logout(user_scrn.this);
+                    Intent intent = new Intent(user_scrn.this, MainActivity.class);
+                    startActivity(intent);
+                    finish(); // Close user_scrn so the user can't go back to it
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }

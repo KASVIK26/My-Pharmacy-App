@@ -6,10 +6,61 @@
     android:id="@+id/deletescrn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#312F2F"
+    android:background="@drawable/gradient"
     tools:context=".owner_delete">
 
-    <!-- Title TextView -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_deleteproduct">
+
+        <Button
+            android:id="@+id/btndelete"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/ic_backg"
+            android:fontFamily="@font/tinos_reg"
+            android:text="Delete"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/e_name" />
+
+        <EditText
+            android:id="@+id/e_name"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/color_button"
+            android:ems="10"
+            android:fontFamily="@font/tinos_reg"
+            android:hint="Enter Product Name"
+            android:textColor="@color/black"
+            android:textColorHint="#4C4949"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginBottom="13dp"
+            android:fontFamily="@font/tinos_reg"
+            android:text="PRODUCT NAME"
+            android:textColor="@color/btncolor"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/e_name"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/txt_deleteproduct"
         android:layout_width="wrap_content"
@@ -19,53 +70,14 @@
         android:text="DELETE PRODUCT"
         android:textColor="@color/btncolor"
         android:textSize="40sp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Label TextView -->
-    <TextView
-        android:id="@+id/p_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/tinos_reg"
-        android:text="PRODUCT NAME"
-        android:textColor="@color/btncolor"
-        android:textSize="22sp"
-        app:layout_constraintTop_toBottomOf="@id/txt_deleteproduct"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Product Name EditText -->
-    <EditText
-        android:id="@+id/e_name"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/round_button"
-        android:ems="10"
-        android:fontFamily="@font/tinos_reg"
-        android:hint="Enter Product Name"
-        android:textSize="22sp"
-        android:textColorHint="#4C4949"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/p_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Delete Button -->
-    <Button
-        android:id="@+id/btndelete"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/tinos_reg"
-        android:text="Delete"
-        android:background="@drawable/purple_round_btn"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/e_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,70 +5,85 @@
     android:id="@+id/userscrn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#312F2F"
+    android:background="@drawable/gradient"
     tools:context=".user_scrn">
 
     <!-- Greeting TextView -->
-    <TextView
-        android:id="@+id/txthello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:fontFamily="@font/tinos_reg"
-        android:text="Hello!"
-        android:textColor="@color/btncolor"
-        android:textSize="72sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Capture Barcode Label -->
 
     <!-- Barcode Scanner Input -->
 
+
+    <TextView
+        android:id="@+id/txthello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/tinos_reg"
+        android:text="Hello!"
+        android:textColor="@color/btncolor"
+        android:textSize="72sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnsearch"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="24dp"
+
+        android:background="@drawable/ic_backg"
+        android:fontFamily="@font/tinos_reg"
+        android:text="Search"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/e_scanbarcode" />
+
+    <EditText
+        android:id="@+id/e_scanbarcode"
+        android:layout_width="265dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="416dp"
+
+        android:background="@drawable/color_button"
+        android:ems="10"
+        android:fontFamily="@font/tinos_reg"
+        android:hint="Scan Barcode"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/txtcapturebarcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/tinos_reg"
         android:text="CAPTURE BARCODE"
         android:textColor="@color/btncolor"
-        android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txthello" />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/e_scanbarcode"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/e_scanbarcode"
-        android:layout_width="300dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/round_button"
-        android:ems="10"
-        android:textColor="@color/black"
-
-        android:fontFamily="@font/tinos_reg"
-        android:hint="Scan Barcode"
-        android:textColorHint="@android:color/black"
+    <ImageView
+        android:id="@+id/btnuserlogout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:contentDescription="userlogout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtcapturebarcode" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logout" />
 
     <!-- Search Button -->
-    <Button
-        android:id="@+id/btnsearch"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/purple_round_btn"
-        android:fontFamily="@font/tinos_reg"
-
-        android:text="Search"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/e_scanbarcode" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

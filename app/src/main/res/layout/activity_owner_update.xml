@@ -5,14 +5,14 @@
     android:id="@+id/ownerupdate"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#312F2F">
+    android:background="@drawable/gradient">
 
     <Button
         android:id="@+id/update"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginTop="36dp"
-        android:background="@drawable/purple_round_btn"
+        android:background="@drawable/ic_backg"
         android:fontFamily="@font/tinos_reg"
         android:text="Update"
         android:textSize="20sp"
@@ -55,7 +55,7 @@
         android:layout_height="48dp"
 
         android:layout_marginTop="96dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/color_button"
         android:ems="10"
         android:fontFamily="@font/tinos_reg"
         android:hint="Enter Price"
@@ -72,7 +72,7 @@
         android:layout_height="48dp"
 
         android:layout_marginTop="96dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/color_button"
         android:ems="10"
         android:fontFamily="@font/tinos_reg"
         android:hint="Enter Price"
@@ -89,7 +89,7 @@
         android:layout_height="48dp"
 
         android:layout_marginTop="62dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/color_button"
         android:ems="10"
         android:fontFamily="@font/tinos_reg"
         android:hint="Enter Exp. Date"
@@ -121,7 +121,7 @@
         android:layout_height="48dp"
 
         android:layout_marginTop="72dp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/color_button"
         android:ems="10"
         android:fontFamily="@font/tinos_reg"
         android:hint="Scan Barcode"
@@ -154,7 +154,7 @@
         android:fontFamily="@font/tinos_reg"
         android:text="UPDATE PRODUCT"
         android:textColor="@color/btncolor"
-        android:textSize="36sp"
+        android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
